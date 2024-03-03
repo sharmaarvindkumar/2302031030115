@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <title>Responsive Navbar</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+      * {
+         padding: 0;
+         margin: 0;
+         text-decoration: none;
+         list-style: none;
+         box-sizing: border-box;
+      }
+
+
+      nav {
+         background: #1d2125;
+         height: 80px;
+         width: 100%;
+      }
+
+      label.logo {
+         color: white;
+         font-size: 35px;
+         line-height: 80px;
+         padding: 0 100px;
+         font-weight: bold;
+      }
+
+      nav ul {
+         float: right;
+         margin-right: 20px;
+      }
+
+      nav ul li {
+         display: inline-block;
+         line-height: 80px;
+         margin: 0 5px;
+      }
+
+      nav ul li a {
+         color: white;
+         font-size: 17px;
+         padding: 7px 13px;
+         border-radius: 3px;
+      }
+
+      a.active,
+      a:hover {
+         background: #1d2125;
+         transition: .5s;
+      }
+
+      .checkbtn {
+         font-size: 30px;
+         color: white;
+         float: right;
+         line-height: 80px;
+         margin-right: 40px;
+         cursor: pointer;
+         display: none;
+      }
+
+      #check {
+         display: none;
+      }
+
+      @media (max-width: 952px) {
+         label.logo {
+            font-size: 30px;
+            padding-left: 50px;
+         }
+
+         nav ul li a {
+            font-size: 16px;
+         }
+      }
+
+      @media (max-width: 858px) {
+         .checkbtn {
+            display: block;
+         }
+
+         ul {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #2c3e50;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+         }
+
+         nav ul li {
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+         }
+
+         nav ul li a {
+            font-size: 20px;
+         }
+
+         a:hover,
+         a.active {
+            background: none;
+            color: #0082e6;
+         }
+
+         #check:checked~ul {
+            left: 0;
+         }
+      }
+
+      body {
+         background: rgb(49 47 47);
+         font-family: montserrat;
+      }
+
+      #img {
+         border-radius: 50%;
+         width: 40px;
+         position: relative;
+         top: 17px;
+      }
+
+      #img2 {
+         border-radius: 50%;
+         width: 18px;
+         position: relative;
+         top: 5px;
+      }
+
+      .login_box {
+         background: #e2e3e3;
+         width: 25%;
+         height: 53%;
+         margin: 80px auto;
+         border-radius: 20px;
+         margin-left: 37%;
+         float: left;
+      }
+
+
+      .input-style {
+         width: 50%;
+         height: 24px;
+         float: right;
+         margin-right: 47px;
+         border-radius: 5px;
+         background: #e2e3e3;
+      }
+
+      .verify {
+         background: #1f1f6a;
+         color: white;
+         width: 70%;
+         border-radius: 25px;
+         height: 24px;
+      }
+
+      .final {
+         color: black;
+         width: 70%;
+         border-radius: 25px;
+         height: 24px;
+         font-weight: bold;
+         background: #e2e3e3;
+         ;
+         margin-bottom: 18px;
+      }
+
+      .logo {
+         width: 49%;
+         height: 52%;
+         border-radius: 20px;
+         color: white;
+         background: black;
+         margin: 22px;
+      }
+
+      .end {
+
+         background: #1d2125;
+         width: 100%;
+         height: 100px;
+         margin-top: 2%;
+         color: white;
+         position: absolute;
+      }
+
+      .ig_image {
+         background: url(image/im.jpg);
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+         height: 261px;
+         width: 82%;
+         margin: 10px auto;
+      }
+
+      .table1 {
+         width: 60%;
+         margin: 0px auto;
+      }
+
+      .table2 {
+         width: 40%;
+         margin-left: 302px;
+      }
+
+      .table3 {
+         width: 60%;
+         margin-left: 302px;
+      }
+
+      .first_box {
+         width: 50%;
+      }
+
+      .button5 {
+         color: #1d2125;
+      }
+
+      .common_color {
+         color: white;
+
+      }
+
+      .btn_class {
+         width: 95%;
+         background: black;
+         color: white;
+         text-align: center;
+         height: 30px;
+         border-radius: 12px;
+         margin-bottom: 20px;
+      }
+
+      .btn_class4 {
+         width: 95%;
+         background: black;
+         color: white;
+         height: 30px;
+         border-radius: 12px;
+         margin-bottom: 20px;
+      }
+
+      .btn_class2 {
+         width: 20%;
+         background: black;
+         color: white;
+         text-align: center;
+         height: 30px;
+         border-radius: 12px;
+         margin-left: 174px;
+      }
+
+      .button-play {
+         text-align: center;
+      }
+
+      .button-play button {
+         background: black;
+         color: white;
+         padding: 4px;
+         font-size: 15px;
+         width: 100px;
+         border-radius: 5px;
+      }
+   </style>
+</head>
+
+<body>
+   <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+         <i class="fas fa-bars"></i>
+      </label>
+      <label><input type="text" class="logo" name=""
+            value="    Search Song, artists, and playlists based on  your mood"> </label>
+      <ul>
+         <li><a class="active" href="#">Discover</a></li>
+         <li><a href="#">Playlists</a></li>
+         <li><a href="#">favorites</a></li>
+         <li><a href="#">History</a></li>
+         <li><img id="img" src="Profile.png" id="" alt="Avatar" style="width:40px"></li>
+      </ul>
+   </nav>
+   <section class="back">
+      <div class="ig_image">
+      </div>
+      <table width="100%" class="table1">
+         <tr>
+            <td class="common_color">
+               <h3>User Playlist<br></h3>7 tracks
+            </td>
+            <td class=button-play><button>Follow</button></td>
+            <td class="button-play"><button>Message</button></td>
+         </tr>
+      </table>
+
+      <table width="100%" class="table2">
+         <tr>
+            <td class="common_color">Likes</td>
+            <td class="common_color">Details</td>
+            <td class="common_color">Gallery</td>
+            <td class="common_color">Clips</td>
+            <td class="common_color">Followers</td>
+         </tr>
+      </table>
+
+      <table width="100%" class="table3">
+         <tr>
+            <td style="width: 50%;"></td>
+            <td><input class="btn_class4" style="background-color: rgb(42, 36, 36);color: white; " type="text"
+                  name="abcd" placeholder="   Express your mood here">
+            </td>
+         </tr>
+      </table>
+      <h2 class="common_color" style="margin-left: 22%;">User Profile</h2>
+      <table width="100%" class="table3">
+         <tr>
+            <td class="first_box">
+               <table width="100%">
+                  <tr>
+                     <td colspan="2" style="text-align: center;"><input class="btn_class" type="text"
+                           placeholder="Update Mood"></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2" style="text-align: center;"><input class="btn_class" type="text"
+                           placeholder="Edit Profile"></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2" style="text-align: center;"><input class="btn_class" type="text"
+                           placeholder="Add Tag"></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2" style="text-align:left"><label style="margin-left: 25px;"><b>Use
+                              Gallery</b></label></td>
+                  </tr>
+                  <tr>
+                     <td><img style="margin-left: 43px;" src="image/Rectangle 105.png" height="100px" width="150px">
+                     </td>
+                     <td><img src="image/ED.png" height="100px" width="150px"></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2" style="text-align:left"><input class="btn_class2" type="text"
+                           placeholder="Learn More"></td>
+                  </tr>
+               </table>
+
+
+            </td>
+
+
+
+
+
+
+
+
+            <td class="second_box">
+               <table width="100%" align="center">
+                  <tr>
+                     <td class="common_color" colspan="2">
+                        <img id="img2" src="Profile.png" id="" alt="Avatar" style="width:2s0px"> Sharma Arvind
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="common_color" colspan="2">
+                        <label>Feeling the music vibes! Sharing my favorite tunes that match my current mood. Let the
+                           music play and emotions .</label>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><img style="margin-left: 43px;" src="image/atif aslam.jpg" height="100px" width="150px">
+                     </td>
+                     <td><img src="image/Rectangle 105.png" height="100px" width="150px"></td>
+                  </tr>
+                  <tr class="button-play">
+                     <td class="play_btn"><button> Play</button></td>
+                     <td class="play_btn"><button> Play</button></td>
+                  </tr>
+                  <tr>
+                     <td><img style="margin-left: 43px;" src="image/ED.png" height="100px" width="150px">
+                     </td>
+                     <td><img src="image/Shreya-Ghoshal-Day.jpg" height="100px" width="150px"></td>
+                  </tr>
+                  <tr class="button-play">
+                     <td class="play_btn"><button> Play</button></td>
+                     <td class="play_btn"><button> Play</button></td>
+                  </tr>
+               </table>
+
+
+            </td>
+         </tr>
+      </table>
+
+
+
+
+
+
+
+      <div class="end">
+         <table width="100%">
+            <tr>
+               <td style="width: 94%;">&nbsp;&nbsp;&nbsp;&nbsp;Moodtune<br>&nbsp;&nbsp;&nbsp;&nbsp;Crafting Musical
+                  experiencess since 2024
+               </td>
+               <td style="text-align: left;">Help<br>FAQ<br>Support team<br>How it Works</td>
+            </tr>
+         </table>
+      </div>
+   </section>
+</body>
+
+</html>
