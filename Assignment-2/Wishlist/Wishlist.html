@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .box-1 {
+            border: 1px solid white;
+            width: 25%;
+            height: 500px;
+            float: left;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+        }
+
+        .box-2 {
+            border: 1px solid white;
+            width: 65%;
+            height: 500px;
+            float: left;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+        }
+
+        .title {
+            margin-left: 35px;
+            margin-top: 20px;
+            color: white;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 35.33%;
+            padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .btn {
+            margin-left: 50px;
+            background: black;
+            width: 82px;
+            color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .btn2 {
+            margin-left: 68px;
+            background: black;
+            width: 82px;
+            color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .title_tx {
+            font-size: 20px;
+            margin-left: 247px;
+            color: white;
+        }
+
+        .end {
+            background: #292929;
+            width: 100%;
+            height: 100px;
+            color: white;
+            position: absolute;
+            top: 630px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label>
+            <h3 class="logo">Moodtunes</h3>
+        </label>
+
+        <ul>
+            <li style="color: white;">
+                <h3>About us</h3>
+            </li>
+            <li style="color: white;">
+                <h3>Logout</h3>
+            </li>
+            <li><img id="profile_img" src="image/Profile.png" id="" alt="Avatar" style="width:40px"></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div>
+            <span class="box-1">
+                <label>
+                    <h3 class="title">History</h3>
+                </label>
+                <div class="row">
+                    <div class="column">
+                        <img src="image/pop.png" alt="Snow"
+                            style="width:85%; margin-left: 29px;margin-top: 40px;">
+                        <button class="btn">Play</button>
+                    </div>
+                    <div class="column">
+                        <img src="image/guitar.png" alt="Snow"
+                            style="width:90%;    margin-left: 55px;margin-top: 40px">
+                        <button class="btn2">Play</button>
+
+                    </div>
+                    <div class="column">
+                        <img src="image/piano.png" alt="Snow"
+                            style="width:85%;    margin-left: 29px;margin-top: 40px">
+                        <button class="btn">Play</button>
+
+                    </div>
+                    <div class="column">
+                        <img src="image/rock_guitar.png" alt="Snow"
+                            style="width:100%;    margin-left: 55px;margin-top: 40px">
+                        <button class="btn2">Play</button>
+                    </div>
+                </div>
+            </span>
+
+
+            <span class="box-2">
+                <h3 class="title">My Wishlists</h3>
+                <div class="row">
+                    <div class="column">
+                        <img src="image/Rectangle 105.png" alt="Snow" style="width:65%;margin-left: 210px;;">
+                        <label class="title_tx">Arjit-Singh</label>
+                    </div>
+                    <div class="column">
+                        <img src="image/ed.png" alt="Snow" style="width:65%;    margin-left: 200px;">
+                        <label class="title_tx">ED</label>
+                    </div>
+                    <div class="column">
+                        <img src="image/atif aslam.png" alt="Snow" style="width:65%;    margin-left: 210px;">
+                        <label class="title_tx">Atif-aslam</label>
+                    </div>
+                    <div class="column">
+                        <img src="image/darshan.png" alt="Snow" style="width:60%;    margin-left: 200px;">
+                        <label class="title_tx">Darshan</label>
+                    </div>
+                </div>
+            </span>
+
+        </div>
+    </section>
+    <section>
+        <div class="end">
+            <table width="100%">
+                <tr>
+                    <td style="width: 94%;">&nbsp;&nbsp;&nbsp;&nbsp;Moodtune<br>&nbsp;&nbsp;&nbsp;&nbsp;Crafting Musical
+                        experiencess since
+                        2024</td>
+                    <td>Help<br>FAQ<br>Support team<br>How it Works</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>
