@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .wrapper {
+        margin: auto;
+    }
+</style>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label>
+            <h3 class="logo">Moodtunes</h3>
+        </label>
+        <label>
+            <h5 class="emotion-text">Emotions</h5>
+        </label>
+        <label>
+            <h5 class="seach_song">Search Songs</h5>
+        </label>
+        <label>
+            <h5 class="custom_play">Custom Playlists</h5>
+        </label>
+        <ul>
+            <li><input type="text" id="" name="" class="form-control search-box" placeholder="Input mood" /></li>
+            <li><input type="text" id="" name="" class="form-control search-box" placeholder="Search music" /></li>
+            <li><img id="profile_img" src="image/Profile.png" id="" alt="Avatar" style="width:40px"></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <!-- Left side -->
+        <div class="left">
+            <div class="product-left">
+                <div class="text-left">
+                    <a class="back-icon mouse-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="15" viewBox="0 0 512 512">
+                            <path fill="#fafafa"
+                                d="M22.6 278.6L0 256l22.6-22.6 128-128 22.6-22.6L218.5 128l-22.6 22.6L122.5 224 480 224l32 0 0 64-32 0-357.5 0 73.4 73.4L218.5 384l-45.3 45.3-22.6-22.6-128-128z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="left-title">Your Playlist</div>
+                <div>
+                    <div class="left-title2">Search songs or artists</div>
+                    <div class="left-search-song">
+                        <input type="text" id="" name="" class="form-control left-search-box " />
+                    </div>
+                </div>
+                <div>
+                    <div class="left-title3">Songs title</div>
+                    <div class="left-search-song2">
+                        <input type="text" id="" name="" class="form-control left-search-box " />
+                    </div>
+                </div>
+                <div>
+                    <div class="left-title4">Artists name</div>
+                    <div class="left-search-song3">
+                        <input type="text" id="" name="" class="form-control left-search-box " />
+                    </div>
+                </div>
+                <div>
+                    <div class="left-title5">Create playlist</div>
+                    <div class="left-search-song4">
+                        <input type="text" id="" name="" class="form-control left-search-box " />
+                    </div>
+                </div>
+                <button class="generate-button">Generate</button>
+                <div class="left-first-menu">
+                    <p class="left-menu-title">
+                        Music filters
+                    </p>
+                    <div><a href="#" class="left-link">Relaxing melodies</a></div>
+                    <div><a href="#" class="left-link">Morning tunes</a></div>
+                    <div><a href="#" class="left-link">Airport ambiance music</a></div>
+                    <div><a href="#" class="left-link">Chill vibes</a></div>
+                </div>
+
+                <div class="left-second-menu">
+                    <p class="left-menu-title">
+                        Playlist theme
+                    </p>
+                    <div><a href="#" class="left-link">Soothing sounds</a></div>
+                    <div><a href="#" class="left-link">Energetic beats</a></div>
+                    <div><a href="#" class="left-link">Upbeat rhythms</a></div>
+                    <div><a href="#" class="left-link">Melancholic melodies</a></div>
+                </div>
+
+                <div class="left-thired-menu">
+                    <p class="left-menu-title">
+                        Music filters
+                    </p>
+                    <div><a href="#" class="left-link">All emotions</a></div>
+                    <div><a href="#" class="left-link">Highly rated</a></div>
+                    <div><a href="#" class="left-link">Positive reviews</a></div>
+                    <div><a href="#" class="left-link">Versatile tunes</a></div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End -->
+
+        <!-- Right side -->
+        <div class="right">
+            <p class="music-text">Result For</p>
+            <br />
+            <p class="music-text">Emotion: Happy, Excited, Energetic</p>
+            <div class="wrapper">
+
+                <div class="product">
+                    <div class="text">
+                        <div class="code">Upbeat melodies<p class="music-left-text">Feel-good tunes</p>
+                        </div>
+                        <div class="code tag-line">Positive vibes all around<p class="music-left-text">Grove to the
+                                rhythm</p>
+                        </div>
+                        <div class="code tag-line">Dancefloor hits <button class="music-left-text play-button">
+                                play</button>
+                        </div>
+                        <div class="code tag-line">Catchy melodies</div>
+                        <div class="has-tag">
+                            #Top pick
+                        </div>
+
+                        <div class="has-tag2">
+                            #Recommed
+                        </div>
+                    </div>
+                    <div class="preview">
+                        <svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <image class="image" xlink:href="image/darshan.jpg" x="0" y="0" width="200px"
+                                height="180px" />
+                        </svg>
+                    </div>
+
+                </div>
+
+
+                <div class="product">
+                    <div class="text">
+                        <div class="code">Energy Boosters<p class="music-left-text">Feel the positive vibes</p>
+                        </div>
+                        <div class="code tag-line">Get energized with music<p class="music-left-text">Listen and uplift
+                                your spirits</p>
+                        </div>
+                        <div class="code tag-line">Lets the music move you <button class="music-left-text play-button">
+                                play</button>
+                        </div>
+                        <div class="has-tag">
+                            #High energy
+                        </div>
+
+                    </div>
+                    <div class="preview">
+                        <svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <image class="image" xlink:href="image/atif aslam.jpg" x="0" y="0" width="200px"
+                                height="180px" />
+                        </svg>
+                    </div>
+
+                </div>
+
+                <div class="product">
+                    <div class="text">
+                        <div class="code">Rhythmic Retreat<p class="music-left-text">Feel the vibes</p>
+                        </div>
+                        <div class="code tag-line">Perfect<p class="music-left-text">Grove the Tunes</p>
+                        </div>
+                        <div class="code tag-line">Dancefloor hits <button class="music-left-text play-button">
+                                play</button></div>
+                        <div class="has-tag">
+                            Top 3
+                        </div>
+                    </div>
+                    <div class="preview">
+                        <svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <image class="image" xlink:href="image/ed.png" x="0" y="0" width="200px"
+                                height="180px" />
+                        </svg>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="pagination-box">
+            <div id="wrapper">
+               <ul id="pagination">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#" >2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a href="#">10</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="end">
+            <table width="100%">
+                <tr>
+                    <td style="width: 94%;">&nbsp;&nbsp;&nbsp;&nbsp;Moodtune<br>&nbsp;&nbsp;&nbsp;&nbsp;Crafting Musical
+                        experiencess since
+                        2024</td>
+                    <td>Help<br>FAQ<br>Support team<br>How it Works</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>
