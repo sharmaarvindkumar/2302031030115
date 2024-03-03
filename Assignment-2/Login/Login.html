@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <title>Responsive Navbar</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+      * {
+         padding: 0;
+         margin: 0;
+         text-decoration: none;
+         list-style: none;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: montserrat;
+      }
+
+      nav {
+         background: #1d2125;
+         height: 80px;
+         width: 100%;
+      }
+
+      label.logo {
+         color: white;
+         font-size: 35px;
+         line-height: 80px;
+         padding: 0 100px;
+         font-weight: bold;
+      }
+
+      nav ul {
+         float: right;
+         margin-right: 20px;
+      }
+
+      nav ul li {
+         display: inline-block;
+         line-height: 80px;
+         margin: 0 5px;
+      }
+
+      nav ul li a {
+         color: white;
+         font-size: 17px;
+         padding: 7px 13px;
+         border-radius: 3px;
+         text-transform: uppercase;
+      }
+
+      a.active,
+      a:hover {
+         background: #1d2125;
+         transition: .5s;
+      }
+
+      .checkbtn {
+         font-size: 30px;
+         color: white;
+         float: right;
+         line-height: 80px;
+         margin-right: 40px;
+         cursor: pointer;
+         display: none;
+      }
+
+      #check {
+         display: none;
+      }
+
+      @media (max-width: 952px) {
+         label.logo {
+            font-size: 30px;
+            padding-left: 50px;
+         }
+
+         nav ul li a {
+            font-size: 16px;
+         }
+      }
+
+      @media (max-width: 858px) {
+         .checkbtn {
+            display: block;
+         }
+
+         ul {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #2c3e50;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+         }
+
+         nav ul li {
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+         }
+
+         nav ul li a {
+            font-size: 20px;
+         }
+
+         a:hover,
+         a.active {
+            background: none;
+            color: #0082e6;
+         }
+
+         #check:checked~ul {
+            left: 0;
+         }
+      }
+
+      body {
+         background: url(im.jpg) no-repeat center center fixed;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+      }
+
+      #img {
+         border-radius: 50%;
+         width: 40px;
+         position: relative;
+         top: 17px;
+      }
+
+      .login_box {
+         background: #e2e3e3;
+         width: 25%;
+         height: 53%;
+         margin: 80px auto;
+         border-radius: 20px;
+         margin-left: 37%;
+         float: left;
+      }
+
+      .first_box {
+         width: 25%;
+         height: 53%;
+         margin-left: 27%;
+         margin-top: 80px;
+         float: left;
+      }
+
+      .input-style {
+         width: 50%;
+         height: 24px;
+         float: right;
+         margin-right: 47px;
+         border-radius: 5px;
+         background: #e2e3e3;
+      }
+
+      .verify {
+         background: #1f1f6a;
+         color: white;
+         width: 70%;
+         border-radius: 25px;
+         height: 24px;
+      }
+
+      .final {
+         color: black;
+         width: 70%;
+         border-radius: 25px;
+         height: 24px;
+         font-weight: bold;
+         background: #e2e3e3;
+         ;
+         margin-bottom: 18px;
+      }
+
+      .logo {
+         width: 49%;
+         height: 52%;
+         border-radius: 20px;
+         color: white;
+         background: black;
+         margin: 22px;
+      }
+
+      .end {
+
+         background: #1d2125;
+         width: 100%;
+         height: 100px;
+         margin-top: 36%;
+         color: white;
+         position: absolute;
+      }
+   </style>
+</head>
+
+<body>
+   <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+         <i class="fas fa-bars"></i>
+      </label>
+      <label><input type="text" class="logo" name=""
+            value="    Search Song, artists, and playlists based on  your mood"> </label>
+      <ul>
+         <li><a class="active" href="#">Discover</a></li>
+         <li><a href="#">Playlists</a></li>
+         <li><a href="#">favorites</a></li>
+         <li><a href="#">History</a></li>
+         <li><img id="img" src="Profile.png" id="" alt="Avatar" style="width:40px"></li>
+      </ul>
+   </nav>
+   <section>
+      <center>
+         <div class="login_box">
+
+            <br>
+            <label style="font-weight: bold; ">Login</label>
+            <br>
+            <br>
+            <label>Username</label>
+            <input type="text" name="" class="input-style">
+            <br>
+            <br>
+            <label>Password</label>
+            <input type="text" name="" class="input-style">
+            <br>
+            <br>
+            <label>Email</label>
+            <input type="text" name="" class="input-style">
+            <br>
+            <br>
+            <button class="verify">Verify</button>
+            <br>
+            <br>
+            <label style="font-weight: bold;">Or</label>
+            <br>
+            <br>
+            <button class="final"> <i class="fa fa-google" aria-hidden="true"></i> Signup with Google</button>
+         </div>
+      </center>
+
+      <div class="end">
+         <table width="100%">
+            <tr>
+               <td style="width: 94%;">&nbsp;&nbsp;&nbsp;&nbsp;Moodtune<br>&nbsp;&nbsp;&nbsp;&nbsp;Crafting Musical experiencess since 2024
+               </td>
+               <td style="text-align: left;">Help<br>FAQ<br>Support team<br>How it Works</td>
+            </tr>
+         </table>
+      </div>
+   </section>
+</body>
+
+</html>
